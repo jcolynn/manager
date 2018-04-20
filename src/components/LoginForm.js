@@ -10,8 +10,10 @@ class LoginForm extends Component {
   }
 
   onPasswordChange(text) {
+    //Call Action Creator
     this.props.passwordChanged(text);
   }
+
   render() {
     return (
       <Card>
@@ -49,4 +51,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, emailChanged)(LoginForm);
+export default connect(mapStateToProps, { emailChanged, passwordChanged })(LoginForm);
