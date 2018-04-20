@@ -17,7 +17,7 @@ class LoginForm extends Component {
 
   onButtonPress() {
     const { email, password } = this.props;
-
+    //Call Action Creator
     this.props.loginUser({ email, password });
   }
 
